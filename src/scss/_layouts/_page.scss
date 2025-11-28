@@ -1,0 +1,125 @@
+@use '../index' as i;
+
+body {
+	background-color: i.$navy-950;
+}
+
+.page-container {
+	margin: 252px auto;
+	max-width: 1116px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: i.$spacing-400;
+}
+
+.header {
+	grid-row: 1 / 3;
+}
+
+@media (max-width: 1440px) {
+	.page-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		max-width: 612px;
+		margin: 173px auto;
+		gap: i.$spacing-300;
+	}
+
+	.header {
+		grid-column: 1 / 4;
+		grid-row: 1;
+		gap: 0px;
+		width: 612px;
+		max-height: 203px;
+		height: 203px;
+
+		&__profile {
+			min-height: 133px;
+			height: 133px;
+			flex-direction: row;
+			gap: i.$spacing-300;
+		}
+
+		&__btn {
+			flex-direction: row;
+			justify-content: center;
+			padding: 24px 134.5px;
+		}
+
+		&__personal {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			&-name {
+			@include i.text-preset-4;
+		}
+		}
+	}
+
+	.card {
+		width: 188px;
+		max-height: 213px;
+
+		.content {
+			&__header {
+				margin: 25.5px 21.5px 0 21.5px;
+			}
+
+			&__data {
+				margin: 0 21.5px 25.5px 21.5px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.page-container {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+		max-width: 327px;
+		margin: 81px auto;
+		gap: i.$spacing-300;
+	}
+
+	.header {
+		grid-column: 1;
+		grid-row: 1;
+		gap: 0px;
+		width: 327px;
+		max-height: 203px;
+		height: 203px;
+
+		&__btn {
+			padding: 24px 0;
+		}
+	}
+
+	.card {
+		width: 327px;
+		max-height: 160px;
+		height: 160px;
+
+		.content {
+			min-height: 122px;
+			height: 122px;
+			gap: i.$spacing-100;
+
+			&__header {
+				margin: 27px 24px 0 24px;
+			}
+
+			&__data {
+				margin: 0 24px 27px 24px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			&__current {
+				@include i.text-preset-3;
+			}
+		}
+	}
+}

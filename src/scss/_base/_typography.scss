@@ -1,0 +1,55 @@
+@mixin text-preset-1 {
+	font-family: "Rubik", sans-serif;
+	font-size: 56px;
+	font-weight: 300;
+	line-height: 66px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+	font-family: "Rubik", sans-serif;
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 47px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+	font-family: "Rubik", sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 38px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+	font-family: "Rubik", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 28px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-5r {
+	font-family: "Rubik", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-5m {
+	font-family: "Rubik", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0;
+}
+
+@mixin text-preset-6 {
+	font-family: "Rubik", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0;
+}

@@ -1,0 +1,99 @@
+@use '../index' as i;
+
+.work {
+	background-color: i.$orange-300;
+}
+
+.play {
+	background-color: i.$blue-300;
+}
+
+.study {
+	background-color: i.$pink-400;
+}
+
+.exercise {
+	background-color: i.$green-400;
+}
+
+.social {
+	background-color: i.$purple-700;
+}
+
+.self-care {
+	background-color: i.$yellow-300;
+}
+
+.card {
+	width: 255px;
+	max-height: 244px;
+	@include i.radius;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: relative;
+	overflow: hidden;
+	border: none;
+}
+
+.background-image {
+	position: relative;
+	z-index: 0;
+	margin-right: 14px;
+	margin-top: -5px;
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	min-height: 199px;
+	background-color: i.$navy-900;
+	@include i.radius;
+	display: flex;
+	flex-direction: column;
+	gap: i.$spacing-300;
+
+	&:hover {
+		background-color: i.$navy-800;
+	}
+
+	&__btn {
+		border: none;
+		background-color: transparent;
+
+		.ellipsis {
+			color: i.$navy-200;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 31px 32.5px 0 32.5px;
+	}
+
+	&__title {
+		color: i.$white;
+		@include i.text-preset-5m;
+	}
+
+	&__current {
+		color: i.$white;
+		@include i.text-preset-1;
+	}
+
+	&__previous {
+		color: i.$navy-200;
+		@include i.text-preset-6;
+	}
+
+	&__data {
+		margin: 0 32.5px 31px 32.5px;
+	}
+}

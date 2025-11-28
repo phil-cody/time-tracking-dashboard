@@ -1,0 +1,66 @@
+@use '../index' as i;
+
+.header {
+	@include i.flex-center;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 28px;
+	width: 255px;
+	height: 520px;
+	@include i.radius;
+	background-color: i.$navy-900;
+
+	&__profile {
+		width: 100%;
+		height: 354px;
+		min-height: 354px;
+		@include i.radius;
+		background-color: i.$purple-600;
+		padding: i.$spacing-400;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: i.$spacing-500;
+	}
+
+	&__avatar {
+		border: 3px solid i.$white;
+		border-radius: 100%;
+	}
+
+	&__personal {
+
+		&-title {
+			@include i.text-preset-6;
+			color: i.$navy-200;
+		}
+
+		&-name {
+			@include i.text-preset-2;
+			color: i.$white;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		height: 100%;
+		padding-left: i.$spacing-400;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 21px;
+
+		.btn {
+			width: 109px;
+			border: none;
+			background-color: transparent;
+			@include i.text-preset-5r;
+			color: i.$purple-500;
+
+			&:hover {
+				color: i.$white;
+			}
+		}
+	}
+}

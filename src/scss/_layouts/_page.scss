@@ -20,7 +20,7 @@ body {
 @media (max-width: 1440px) {
 	.page-container {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: 203px repeat(2, 213px);
 		max-width: 612px;
 		margin: 173px auto;
 		gap: i.$spacing-300;
@@ -84,7 +84,7 @@ body {
 @media (max-width: 768px) {
 	.page-container {
 		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: repeat(7, 1fr);
+		grid-template-rows: 203px repeat(6, 160px);
 		max-width: 327px;
 		margin: 81px auto;
 		gap: i.$spacing-300;

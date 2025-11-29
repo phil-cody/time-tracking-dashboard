@@ -1,32 +1,33 @@
 @use '../index' as i;
 
-.work {
+.work .card__background {
 	background-color: i.$orange-300;
 }
 
-.play {
+.play .card__background {
 	background-color: i.$blue-300;
 }
 
-.study {
+.study .card__background {
 	background-color: i.$pink-400;
 }
 
-.exercise {
+.exercise .card__background {
 	background-color: i.$green-400;
 }
 
-.social {
+.social .card__background {
 	background-color: i.$purple-700;
 }
 
-.self-care {
+.self-care .card__background {
 	background-color: i.$yellow-300;
 }
 
 .card {
 	width: 255px;
 	max-height: 244px;
+	height: 244px;
 	@include i.radius;
 	display: flex;
 	flex-direction: column;
@@ -36,16 +37,27 @@
 	border: none;
 }
 
-.background-image {
+.card__background {
+	overflow: hidden;
 	position: relative;
 	z-index: 0;
-	margin-right: 14px;
-	margin-top: -5px;
+	min-height: 40px;
+	height: 60px;
+	width: 100%;
+}
+
+.background-image {
+	position: absolute;
+	z-index: 1;
+	right: 14px;
+	top: -5px;
 }
 
 .content {
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	top: 45px;
+	bottom: 0;
+	z-index: 2;
 	width: 100%;
 	min-height: 199px;
 	background-color: i.$navy-900;

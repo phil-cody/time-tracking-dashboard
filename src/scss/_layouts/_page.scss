@@ -45,6 +45,10 @@ body {
 			flex-direction: row;
 			justify-content: center;
 			padding: 24px 134.5px;
+
+			.btn {
+				width: 109px;
+			}
 		}
 
 		&__personal {
@@ -63,6 +67,9 @@ body {
 		max-height: 213px;
 
 		.content {
+			min-height: 180px;
+			height: 180px;
+
 			&__header {
 				margin: 25.5px 21.5px 0 21.5px;
 			}

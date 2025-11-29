@@ -110,7 +110,6 @@ select {
   gap: 21px;
 }
 .header__btn .btn {
-  width: 109px;
   border: none;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
@@ -123,34 +122,38 @@ select {
 .header__btn .btn:hover {
   color: #fff;
 }
+.header .active {
+  color: #fff;
+}
 
-.work {
+.work .card__background {
   background-color: #ff8b64;
 }
 
-.play {
+.play .card__background {
   background-color: #55c2e6;
 }
 
-.study {
+.study .card__background {
   background-color: #ff5e7d;
 }
 
-.exercise {
+.exercise .card__background {
   background-color: #4bcf82;
 }
 
-.social {
+.social .card__background {
   background-color: #7335d2;
 }
 
-.self-care {
+.self-care .card__background {
   background-color: #f1c75b;
 }
 
 .card {
   width: 255px;
   max-height: 244px;
+  height: 244px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -160,16 +163,27 @@ select {
   border: none;
 }
 
-.background-image {
+.card__background {
+  overflow: hidden;
   position: relative;
   z-index: 0;
-  margin-right: 14px;
-  margin-top: -5px;
+  min-height: 40px;
+  height: 60px;
+  width: 100%;
+}
+
+.background-image {
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  top: -5px;
 }
 
 .content {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  z-index: 2;
   width: 100%;
   min-height: 199px;
   background-color: #1c204b;
@@ -269,6 +283,9 @@ body {
     justify-content: center;
     padding: 24px 134.5px;
   }
+  .header__btn .btn {
+    width: 109px;
+  }
   .header__personal {
     display: flex;
     flex-direction: column;
@@ -284,6 +301,10 @@ body {
   .card {
     width: 188px;
     max-height: 213px;
+  }
+  .card .content {
+    min-height: 180px;
+    height: 180px;
   }
   .card .content__header {
     margin: 25.5px 21.5px 0 21.5px;
